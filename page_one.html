@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="flashcard.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Flashcards</title>
+</head>
+<body style="background-image: url('colour.jpg'); background-position: center; background-color: #5F4538; background-repeat: no-repeat;">
+
+  <main>
+    
+    <header>
+      <div class="container">
+        <div id="header">
+          <h1 style="margin: auto;"><a href="index.html" style="text-decoration: none; font-size:xx-small"><<<(Previous Page)</a> <em>       ❤️ The things that I love about you ❤️      </em> <a href="page_two.html" style="text-decoration: none; font-size:xx-small">>>>(Next Page)</a></h1>
+        </div>
+      </div>
+    </header>
+    
+    <section>
+        <div class="card_container" style="display:flex; justify-content: space-between; flex-wrap: wrap; width: 80%; margin: auto;">
+            <div id ="1" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">1</h2>
+                <h2 id="txt1" style="text-align:center; display:none; color:#5F4538; font-size:x-large;"><em>Your Indomie Cooker</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="2" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">2</h2>
+                <h2 id="txt2" style="text-align:center; display:none; color:#5F4538; font-size:x-large;"><em>Your TowerGate Digestive</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="3" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">3</h2>
+                <h2 id="txt3" style="text-align:center; display:none; color:#5F4538; font-size:x-large;"><em>Your Hot Chocolate</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="4" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">4</h2>
+                <h2 id="txt4" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>Your Hair Styling Skills</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="5" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">5</h2>
+                <h2 id="txt5" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>Your Frequent Spamming</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="6" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">6</h2>
+                <h2 id="txt6" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>Your Determination and Uncompromising nature</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="7" class="flashcard">
+                <h2  style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">7</h2>
+                <h2 id="txt7" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>The way you care so much about people (sometimes tho... 👀)</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="8" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">8</h2>
+                <h2 id="txt8" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>Your Passion for what you do</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id="9" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">9</h2>
+                <h2 id="txt9" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>Your Laughter especially when I'm the one that made you laugh</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="10" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">10</h2>
+                <h2 id ="txt10" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>Your Heart</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+        </div>
+    </section>
+
+
+  </main>
+  
+  <script>
+    const cards_list = document.querySelectorAll(".flashcard");
+    for (var i = 0; i < cards_list.length; i++)
+    {
+        const cards = Array.from(cards_list); 
+        card = cards[i];
+        card.onclick = function(e) {
+            console.log(e);
+            var id = e.target.id; 
+            document.getElementById("txt"+ e.target.id).style.display = "block";
+            document.getElementById(id).setAttribute('style', 'background-color: white');
+    };
+    }
+    
+  </script>
+</body>
+</html>

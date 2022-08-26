@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="flashcard.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Flashcards</title>
+</head>
+<body style="background-image: url('colour.jpg'); background-position: center; background-color: #5F4538; background-repeat: no-repeat;">
+
+  <main>
+    
+    <header>
+      <div class="container">
+        <div id="header">
+          <h1 style="margin: auto;"><a href="page_one.html" style="text-decoration: none; font-size:xx-small"><<<(Previous Page)</a> <em>❤️ Here's a little message for you ❤️</em> </h1>
+        </div>
+      </div>
+    </header>
+    
+    <section>
+        <div class="card_container" style="display:flex; justify-content: space-between; flex-wrap: wrap; width: 80%; margin: auto;">
+            <div id ="11" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">11</h2>
+                <h2 id="txt11" style="text-align:center; display:none; color:#5F4538; font-size:x-large;"><em>Dear Ote, </em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="12" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">12</h2>
+                <h2 id="txt12" style="text-align:center; display:none; color:#5F4538; font-size:x-large;"><em>I</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="13" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">13</h2>
+                <h2 id="txt13" style="text-align:center; display:none; color:#5F4538; font-size:x-large;"><em>just want to</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="14" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">14</h2>
+                <h2 id="txt14" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>let you know</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="15" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">15</h2>
+                <h2 id="txt15" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>that</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="16" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">16</h2>
+                <h2 id="txt16" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>I</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="17" class="flashcard">
+                <h2  style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">17</h2>
+                <h2 id="txt17" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>love</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="18" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">18</h2>
+                <h2 id="txt18" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>Chocolatessssssss 🍫</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id="19" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">19</h2>
+                <h2 id="txt19" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>Just Kidding<br>I love you baby ❤️</em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+            <div id ="20" class="flashcard">
+                <h2 style="border-top:1px solid #5F4538; padding: 15px; margin-top:30px">20</h2>
+                <h2 id ="txt20" style="text-align:center; display:none; color:#5F4538; font-size: x-large;"><em>Happy 20th birthday to my best person ❤️ </em></h2>
+                <i class="fa-solid fa-flower"></i>
+            </div>
+        </div>
+    </section>
+
+
+  </main>
+  
+  <script>
+    const cards_list = document.querySelectorAll(".flashcard");
+    for (var i = 0; i < cards_list.length; i++)
+    {
+        const cards = Array.from(cards_list); 
+        card = cards[i];
+        card.onclick = function(e) {
+            console.log(e);
+            var id = e.target.id; 
+            document.getElementById("txt"+ e.target.id).style.display = "block";
+            document.getElementById(id).setAttribute('style', 'background-color: white');
+    };
+    }
+    
+  </script>
+</body>
+</html>
